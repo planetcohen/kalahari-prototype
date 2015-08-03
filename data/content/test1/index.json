@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "url": "/test1",
+    "title": "Test Page",
+    "layout": "layout"
+  },
+  "tiles": [
+    "header",
+    "title",
+    "hero",
+    "body",
+    "footer"
+  ]
+}

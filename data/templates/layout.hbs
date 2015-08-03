@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+    div.tile-wrapper {
+      border-width: 1px;
+      border-color: white;
+      border-style: solid;
+    }
+    div.tile-wrapper:hover {
+      border-color: red;
+    }
+    </style>
+  </head>
+  <body>
+    {{{editor}}}
+
+    {{{body}}}
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    (function($) {
+
+      function onTileClick(e) {
+        console.log("onTileClick: e =>", e);
+        var $target = $(e.currentTarget);
+        console.log("$target =>", $target);
+        var href = document.location.href;
+        console.log("href =>", href);
+        var tileSrc = $target.attr('data-tile')
+        console.log("tileSrc =>", tileSrc);
+
+        var dest = href + "/" + tileSrc;
+        console.log("dest =>", dest);
+
+        var $parent = $target.parent();
+        console.log("$parent =>", $parent);
+        $parent.load(dest);
+
+        //document.location = dest;
+      }
+
+      function ready() {
+        console.log("ready");
+        $('div.tile-show').on('click', onTileClick);
+      }
+
+      $('document').ready(ready);
+    })(jQuery);
+    </script>
+  </body>
+</html>

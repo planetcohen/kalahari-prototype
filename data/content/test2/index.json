@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "url": "/test2",
+    "title": "Second Test Page",
+    "layout": "layout"
+  },
+  "tiles": [
+    "header",
+    "title",
+    {"src": "body2", "template": "body"},
+    {"src": "body1", "template": "body"},
+    "footer"
+  ]
+}

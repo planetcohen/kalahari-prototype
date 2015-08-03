@@ -1,0 +1,8 @@
+{
+  "sitename": "Kalahari Demo",
+  "nav": [
+    {"label": "Test 1", "url": "test1"},
+    {"label": "Test 2", "url": "test2"},
+    {"label": "Test 3", "url": "test3"}
+  ]
+}
